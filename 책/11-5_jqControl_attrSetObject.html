@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <!--CDN 이용-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        // 객체를 입력해 속성 지정
+        // 근데 왜 이미지가 안 뜨지
+        $(document).ready(function () {
+            $('img').attr({
+                alt: 'jQuery 라이브러리를 사용한 속성 지정',
+                src: 'http://via.placeholder.com/100x100',
+                width: 100
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+</body>
+</html>

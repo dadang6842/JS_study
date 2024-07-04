@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Basic</title>
+    <script>
+        // 문서 객체 여러 개 선택
+        // 이벤트 연결
+        window.onload = function () {
+            // 문서 객체 연결
+            let headers = document.querySelectorAll('h1');
+
+            for (let i=0; i<headers.length; i++) {
+                let header=headers[i];
+                header.style.color = 'orange';
+                header.style.background = 'red';
+                header.innerHTML = 'From JS';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>header</h1>
+    <h1>header</h1>
+    <h1>header</h1>
+</body>
+</html>

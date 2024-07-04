@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Basic</title>
+    <!--CDN 이용-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        // 시각 효과 메서드
+        // fadeToggle(속도) : fadeIn() 메서드와 fadeOut() 메서드를 번갈아 실행
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('.page').fadeToggle('slow');  // 속도 지정 안 할 경우 기본 500밀리초 적용
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aut, quidem labore unde temporibus, eius fugiat cum impedit provident delectus aperiam possimus eveniet alias quia? Dolore corporis tenetur delectus quis?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minima facere quaerat, aspernatur vitae veritatis soluta sed quisquam quo alias maxime modi dolorem laudantium porro omnis, eligendi eveniet tempora? Vel.</p>
+    </div>
+</body>
+</html>

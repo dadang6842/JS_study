@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <!--CDN 이용-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        // 기본 이벤트 제거를 활용한 유효성 검사
+        // 한글 이름 입력 시 양식 제출, 아니라면 양식 제출 x
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                // input 태그의 값을 추출
+                let value = $('input').val();
+
+                // 유효성 검사
+                if (value.replace(/[가-힣]/g, '').length == 0) { // 정규 표현식. 따로 공부하기
+                    // 유효성 검사 통과
+                    alert('과정을 진행합니다.');
+                } else {
+                    // 유효성 검사 실패
+                    alert('한글 이름을 입력해주세요.');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>이름</label>
+        <input type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>
